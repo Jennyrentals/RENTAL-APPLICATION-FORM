@@ -1,0 +1,947 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rental Property Application</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .application-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #17365d;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .property {
+            background: #eef5ff;
+            border-left: 5px solid #17365d;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+        }
+
+        .property h2 {
+            margin-top: 0;
+            color: #17365d;
+        }
+
+        .section {
+            margin-top: 35px;
+            border-top: 1px solid #ddd;
+            padding-top: 25px;
+        }
+
+        .section h2 {
+            color: #17365d;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #17365d;
+        }
+
+        .fee-box {
+            background: #f0f9f0;
+            border: 1px solid #8ac78a;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .fee {
+            font-size: 30px;
+            font-weight: bold;
+            color: #247524;
+        }
+
+        .notice {
+            background: #fff8e6;
+            border: 1px solid #e5c36a;
+            padding: 15px;
+            border-radius: 7px;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox input {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .checkbox label {
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #17365d;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background: #0e2642;
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            margin-top: 25px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            .application-card {
+                padding: 20px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="application-card">
+
+        <div class="header">
+            <h1>Rental Property Application</h1>
+
+            <p>
+                Please complete the application below with accurate and
+                current information. All required fields must be completed
+                before submitting your application.
+            </p>
+        </div>
+
+
+
+        <!--
+        ============================================================
+        EMAIL SETTINGS
+        ============================================================
+
+        Replace YOUR_EMAIL@example.com with your actual email address.
+
+        Example:
+        https://formsubmit.co/john@example.com
+
+        ============================================================
+        -->
+
+        <form
+            action="https://formsubmit.co/jennyrentals002@gmail.com"
+            method="POST"
+        >
+
+            <!-- EMAIL SETTINGS -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Rental Application"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+            >
+
+            <!--
+            Optional thank-you page.
+            Replace this with your actual thank-you page.
+            -->
+
+            <input
+                type="hidden"
+                name="_next"
+                value="https://yourwebsite.com/thank-you.html"
+            >
+
+
+            <!-- APPLICANT INFORMATION -->
+
+            <div class="section">
+
+                <h2>1. Applicant Information</h2>
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>
+                            First Name
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="First Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Last Name
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="Last Name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            name="Applicant Email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="Phone Number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Current Address
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="Current Address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>City</label>
+
+                        <input
+                            type="text"
+                            name="City"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>State / Province</label>
+
+                        <input
+                            type="text"
+                            name="State"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>ZIP / Postal Code</label>
+
+                        <input
+                            type="text"
+                            name="Postal Code"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Desired Move-In Date
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            name="Move In Date"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMPLOYMENT -->
+
+            <div class="section">
+
+                <h2>2. Employment & Income</h2>
+
+                <div class="form-group">
+
+                    <label>
+                        Employer / Company Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="Employer"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Job Title</label>
+
+                        <input
+                            type="text"
+                            name="Job Title"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Length of Employment</label>
+
+                        <input
+                            type="text"
+                            name="Employment Length"
+                            placeholder="Example: 2 years"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Monthly Income
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            name="Monthly Income"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Employer Phone</label>
+
+                        <input
+                            type="tel"
+                            name="Employer Phone"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RENTAL HISTORY -->
+
+            <div class="section">
+
+                <h2>3. Rental History</h2>
+
+                <div class="form-group">
+
+                    <label>
+                        Previous Landlord / Property Manager
+                    </label>
+
+                    <input
+                        type="text"
+                        name="Previous Landlord"
+                    >
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Previous Rental Address</label>
+
+                        <input
+                            type="text"
+                            name="Previous Rental Address"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Previous Landlord Phone</label>
+
+                        <input
+                            type="tel"
+                            name="Previous Landlord Phone"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Reason for Leaving</label>
+
+                    <textarea
+                        name="Reason for Leaving"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- REFERENCES -->
+
+            <div class="section">
+
+                <h2>4. Personal Reference</h2>
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Reference Name</label>
+
+                        <input
+                            type="text"
+                            name="Reference Name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Relationship</label>
+
+                        <input
+                            type="text"
+                            name="Reference Relationship"
+                            placeholder="Friend, coworker, etc."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Reference Phone</label>
+
+                        <input
+                            type="tel"
+                            name="Reference Phone"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Reference Email</label>
+
+                        <input
+                            type="email"
+                            name="Reference Email"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HOUSEHOLD -->
+
+            <div class="section">
+
+                <h2>5. Household Information</h2>
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Number of Adults
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            name="Number of Adults"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Number of Children</label>
+
+                        <input
+                            type="number"
+                            name="Number of Children"
+                            min="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Additional Occupants</label>
+
+                    <textarea
+                        name="Additional Occupants"
+                        placeholder="Names and relationship to applicant"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- PETS AND VEHICLES -->
+
+            <div class="section">
+
+                <h2>6. Pets & Vehicles</h2>
+
+                <div class="form-group">
+
+                    <label>Do you have pets?</label>
+
+                    <select name="Pets">
+
+                        <option value="">
+                            Select
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Pet Information</label>
+
+                    <textarea
+                        name="Pet Information"
+                        placeholder="Type, breed, size, number of pets, etc."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Vehicle Information</label>
+
+                    <textarea
+                        name="Vehicle Information"
+                        placeholder="Make, model, year, color, license plate, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPLICATION FEE -->
+
+            <div class="section">
+
+                <h2>7. Rental Application Fee</h2>
+
+                <div class="fee-box">
+
+                    <div class="fee">
+                        $70.00
+                    </div>
+
+                    <p>
+                        <strong>Refundable Rental Application Fee</strong>
+                    </p>
+
+                    <p>
+                        A refundable rental application fee of
+                        <strong>$70.00</strong> is required as part of
+                        the application process, subject to the applicable
+                        terms and laws governing the rental application.
+                    </p>
+
+                </div>
+
+
+                <div class="form-group" style="margin-top:20px;">
+
+                    <label>
+                        Payment Method
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        name="Payment Method"
+                        required
+                    >
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="PayPal">
+                            PayPal
+                        </option>
+
+                        <option value="Cash App">
+                            Cash App
+                        </option>
+
+                        <option value="Zelle">
+                            Zelle
+                        </option>
+
+                        <option value="Chime">
+                            Chime
+                        </option>
+
+                        <option value="Venmo">
+                            Venmo
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Payment Transaction / Reference Number
+                    </label>
+
+                    <input
+                        type="text"
+                        name="Payment Reference"
+                        placeholder="Enter transaction reference"
+                    >
+
+                </div>
+
+
+                <div class="notice">
+
+                    <strong>Payment Safety Notice:</strong>
+
+                    <br><br>
+
+                    Do not enter your payment password, bank password,
+                    debit card PIN, security code, or other confidential
+                    payment credentials into this form.
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDITIONAL INFORMATION -->
+
+            <div class="section">
+
+                <h2>8. Additional Information</h2>
+
+                <div class="form-group">
+
+                    <label>Additional Comments</label>
+
+                    <textarea
+                        name="Additional Comments"
+                        placeholder="Enter any additional information..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- CERTIFICATION -->
+
+            <div class="section">
+
+                <h2>9. Applicant Certification</h2>
+
+
+                <div class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="accurate"
+                        name="Information Certification"
+                        value="Applicant confirms information is accurate."
+                        required
+                    >
+
+                    <label for="accurate">
+
+                        I certify that the information I have provided
+                        in this application is true and accurate to the
+                        best of my knowledge.
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="verification"
+                        name="Verification Authorization"
+                        value="Applicant authorizes verification."
+                        required
+                    >
+
+                    <label for="verification">
+
+                        I authorize the property owner or authorized
+                        property manager to verify the information
+                        provided in this application where legally
+                        permitted.
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBMIT BUTTON -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Submit Rental Application
+            </button>
+
+
+            <div class="footer">
+
+                By submitting this application, you acknowledge that
+                the information provided will be used for rental
+                application purposes and handled in accordance with
+                applicable law.
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
